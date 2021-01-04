@@ -69,11 +69,29 @@ function App(props) {
       window.removeEventListener('resize',onResize);
     }
   },[])
+
+  const onClick=()=>{
+    console.log('click');
+  }
+  useEffect(()=>{  
+    document.querySelector('#size').addEventListener('click',onClick,false)
+    return ()=>{  //清理状态，获取最新状态
+      document.querySelector('#size').removeEventListener('click',onClick,false)
+    }
+  })
+
   return (
+    <>
     <button type="button" onClick={()=>{setCount(count+1)}}>
       click{count}
-      size:{size.width}*{size.height}
     </button>
+    {
+      count%2?
+      <span id="size">size:{size.width}*{size.height}</span>:
+    <p id="size">size:{size.width}*{size.height}</p>
+    }
+    
+    </>
   );
 }
 
