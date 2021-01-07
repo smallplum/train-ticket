@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App.jsx';
-import UseContext from './UseContext.jsx';
+// import UseContext from './UseContext.jsx';
+import UseMemo from './UseMemo.jsx';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <UseContext></UseContext>
+    {/* <UseContext></UseContext> */}
+    <UseMemo></UseMemo>
   </React.StrictMode>,
   document.getElementById('root')
 );
