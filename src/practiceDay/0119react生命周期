@@ -1,0 +1,25 @@
+1、挂载卸载过程
+1.1 constructor()
+1.2 componentWillMount()
+1.3 conponentDidMount()
+1.4 componentWAillUnmount()
+
+2、更新过程
+2.1 componentWillReceiveProps(nextProps)
+2.2 shouldComponentUpdate(nextProps,nextState)
+2.3 componentWillUpdate(nextProps,nextState)
+2.4 componentDidUpdate(nextProps,nextState)
+2.5 render()
+
+react新增的生命周期
+3.1 getderivedStateFormProps(nextProps,prevState)
+3.2 getSnapshotBeforeUpdate(nextProps,prevState)
+
+http缓存是性能优化的一个重要方面
+接下来在响应里设置响应头
+Cache-Control: max-age=30
+刷新两次首页
+第二次的时间为0
+响应头中的Cache-Control: max-age=30表示客户端将这个缓存最多 保存30 秒，30秒后再次请求文件将会再次下载。
+
+设置这个响应头之后，浏览器请求时发现是相同的URL，浏览器直接从内存里返回已经缓存的main，js，没有向服务器发出请求
